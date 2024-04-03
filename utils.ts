@@ -18,3 +18,10 @@ export function conditionalClass(
 ): string {
   return condition ? trueClass : falseClass;
 }
+
+/**
+ * Deduplicates class strings.
+ */
+export function uniqueClass(...classes: string[]): string {
+  return Array.from(new Set(classes.join(" ").split(" "))).join(" ");
+}
