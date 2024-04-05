@@ -32,3 +32,14 @@ export function uniqueClass(...classes: string[]): string {
 export function joinClass(...classes: (string | undefined | null)[]): string {
   return classes.filter(Boolean).join(" ");
 }
+
+/**
+ * Conditionally appends a class.
+ */
+export function toggleClass(
+  base: string,
+  condition: boolean,
+  toggledClass: string
+): string {
+  return condition ? `${base} ${toggledClass}` : base;
+}
