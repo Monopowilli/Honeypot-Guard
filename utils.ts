@@ -32,3 +32,23 @@ export function uniqueClass(...classes: string[]): string {
 export function joinClass(...classes: (string | undefined | null)[]): string {
   return classes.filter(Boolean).join(" ");
 }
+
+/**
+ * Conditionally appends a class.
+ */
+export function toggleClass(
+  base: string,
+  condition: boolean,
+  toggledClass: string
+): string {
+  return condition ? `${base} ${toggledClass}` : base;
+}
+
+/**
+ * Prepends class if not already present.
+ */
+export function prependClass(classString: string, newClass: string): string {
+  const classList = classListToArray(classString);
+  if (!classList.includes(newClass)) classList.unshift(newClass);
+  return classList.join(" ");
+}
