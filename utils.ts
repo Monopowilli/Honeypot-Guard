@@ -1,54 +1,57 @@
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
+import React, { Suspense } from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals"; // Added performance monitoring
+import { Web3Provider } from "./contexts/Web3Context"; // Added Web3 provider
 
-/**
- * Merges multiple Tailwind classes with conflict resolution.
- */
-export function cn(...inputs: ClassValue[]): string {
-  return twMerge(clsx(inputs));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error("Error caught by boundary:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong.</h1>;
+    }
+    return this.props.children;
+  }
 }
 
-/**
- * Conditionally returns a class string.
- */
-export function conditionalClass(
-  condition: boolean,
-  trueClass: string,
-  falseClass: string = ""
-): string {
-  return condition ? trueClass : falseClass;
+root.render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Web3Provider> {/* Wrapped App with Web3Provider */}
+          <App />
+        </Web3Provider>
+      </Suspense>
+    </ErrorBoundary>
+  </React.StrictMode>
+);
+
+// Measure app performance only in development mode
+if (process.env.NODE_ENV === "development") {
+  reportWebVitals(console.log);
 }
 
-/**
- * Deduplicates class strings.
- */
-export function uniqueClass(...classes: string[]): string {
-  return Array.from(new Set(classes.join(" ").split(" "))).join(" ");
-}
+// Added a check to send performance metrics to an analytics endpoint in production
+if (process.env.NODE_ENV === "production") {
+  reportWebVitals((metric) => {
+    const body = JSON.stringify(metric);
+    const url = "https://analytics.example.com/metrics"; // Replace with your analytics endpoint
 
-/**
- * Joins non-empty class values into a single string.
- */
-export function joinClass(...classes: (string | undefined | null)[]): string {
-  return classes.filter(Boolean).join(" ");
-}
-
-/**
- * Conditionally appends a class.
- */
-export function toggleClass(
-  base: string,
-  condition: boolean,
-  toggledClass: string
-): string {
-  return condition ? `${base} ${toggledClass}` : base;
-}
-
-/**
- * Prepends class if not already present.
- */
-export function prependClass(classString: string, newClass: string): string {
-  const classList = classListToArray(classString);
-  if (!classList.includes(newClass)) classList.unshift(newClass);
-  return classList.join(" ");
+    navigator.sendBeacon(url, body);
+  });
 }
