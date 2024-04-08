@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -6,6 +6,11 @@ import reportWebVitals from "./reportWebVitals"; // Added performance monitoring
 import { Web3Provider } from "./contexts/Web3Context"; // Added Web3 provider
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const DynamicHome = lazy(() => import("./pages/Home"));
+const DynamicAbout = lazy(() => import("./pages/About"));
+const DynamicToken = lazy(() => import("./pages/Token"));
+const DynamicContact = lazy(() => import("./pages/Contact"));
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -33,7 +38,7 @@ root.render(
   <React.StrictMode>
     <ErrorBoundary>
       <Suspense fallback={<h1>Loading...</h1>}>
-        <Web3Provider> {/* Wrapped App with Web3Provider */}
+        <Web3Provider>
           <App />
         </Web3Provider>
       </Suspense>
