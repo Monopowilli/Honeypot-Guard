@@ -11,6 +11,7 @@ const DynamicHome = lazy(() => import("./pages/Home"));
 const DynamicAbout = lazy(() => import("./pages/About"));
 const DynamicToken = lazy(() => import("./pages/Token"));
 const DynamicContact = lazy(() => import("./pages/Contact"));
+const DynamicDashboard = lazy(() => import("./pages/Dashboard"));
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
