@@ -2,16 +2,19 @@ import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals"; // Added performance monitoring
-import { Web3Provider } from "./contexts/Web3Context"; // Added Web3 provider
+import reportWebVitals from "./reportWebVitals";
+import { QueryClient, QueryClientProvider } from "react-query"; // Added React Query for API data management
+import { Web3Provider } from "./contexts/Web3Context"; 
+import { Provider } from "react-redux";
+import { store } from "./store";
+
+// Initialize React Query Client
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const DynamicHome = lazy(() => import("./pages/Home"));
 const DynamicAbout = lazy(() => import("./pages/About"));
-const DynamicToken = lazy(() => import("./pages/Token"));
-const DynamicContact = lazy(() => import("./pages/Contact"));
-const DynamicDashboard = lazy(() => import("./pages/Dashboard"));
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -39,25 +42,18 @@ root.render(
   <React.StrictMode>
     <ErrorBoundary>
       <Suspense fallback={<h1>Loading...</h1>}>
-        <Web3Provider>
-          <App />
-        </Web3Provider>
+        <QueryClientProvider client={queryClient}>
+          <Web3Provider>
+            <Provider store={store}>
+              <App />
+            </Provider>
+          </Web3Provider>
+        </QueryClientProvider>
       </Suspense>
     </ErrorBoundary>
   </React.StrictMode>
 );
 
-// Measure app performance only in development mode
 if (process.env.NODE_ENV === "development") {
   reportWebVitals(console.log);
-}
-
-// Added a check to send performance metrics to an analytics endpoint in production
-if (process.env.NODE_ENV === "production") {
-  reportWebVitals((metric) => {
-    const body = JSON.stringify(metric);
-    const url = "https://analytics.example.com/metrics"; // Replace with your analytics endpoint
-
-    navigator.sendBeacon(url, body);
-  });
 }
