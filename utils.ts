@@ -3,12 +3,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { QueryClient, QueryClientProvider } from "react-query"; // Added React Query for API data management
+import { QueryClient, QueryClientProvider } from "react-query"; 
 import { Web3Provider } from "./contexts/Web3Context"; 
-import { Provider } from "react-redux";
-import { store } from "./store";
+import { Provider } from "react-redux"; 
+import { store } from "./store"; // Redux store imported
 
-// Initialize React Query Client
 const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
