@@ -3,10 +3,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { QueryClient, QueryClientProvider } from "react-query"; 
+import { QueryClient, QueryClientProvider } from "react-query";
 import { Web3Provider } from "./contexts/Web3Context"; 
-import { Provider } from "react-redux"; 
-import { store } from "./store"; // Redux store imported
+import { Provider } from "react-redux";
+import { store } from "./store";
+import { toast } from "react-hot-toast"; // Added for toast notifications
 
 const queryClient = new QueryClient();
 
@@ -56,3 +57,5 @@ root.render(
 if (process.env.NODE_ENV === "development") {
   reportWebVitals(console.log);
 }
+
+toast.success("App loaded successfully!"); // Show success toast on page load
