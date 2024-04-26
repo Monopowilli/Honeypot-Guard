@@ -6,7 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Web3Provider } from "./contexts/Web3Context";
 import { Provider } from "react-redux";
-import { store } from "./store"; // Redux store using Redux Toolkit
+import { store } from "./store";
+import axios from "axios"; // Added Axios for API data fetching
 
 const queryClient = new QueryClient();
 
@@ -14,6 +15,15 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const DynamicHome = lazy(() => import("./pages/Home"));
 const DynamicAbout = lazy(() => import("./pages/About"));
+
+const fetchData = async () => {
+  try {
+    const response = await axios.get("/api/data");
+    console.log(response.data); // Log the fetched data
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
