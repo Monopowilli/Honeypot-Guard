@@ -7,7 +7,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Web3Provider } from "./contexts/Web3Context";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import axios from "axios"; // Added Axios for API data fetching
+import axios from "axios";
 
 const queryClient = new QueryClient();
 
@@ -19,9 +19,10 @@ const DynamicAbout = lazy(() => import("./pages/About"));
 const fetchData = async () => {
   try {
     const response = await axios.get("/api/data");
-    console.log(response.data); // Log the fetched data
+    console.log(response.data);
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error fetching data:", error); // Added error handling for API requests
+    alert("Failed to fetch data. Please try again.");
   }
 };
 
