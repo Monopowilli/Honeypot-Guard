@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Web3Provider } from "./contexts/Web3Context";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import { ThemeProvider } from "./contexts/ThemeContext"; // Added ThemeContext for global theme management
 import axios from "axios";
 
 const queryClient = new QueryClient();
@@ -21,7 +22,7 @@ const fetchData = async () => {
     const response = await axios.get("/api/data");
     console.log(response.data);
   } catch (error) {
-    console.error("Error fetching data:", error); // Added error handling for API requests
+    console.error("Error fetching data:", error);
     alert("Failed to fetch data. Please try again.");
   }
 };
@@ -55,7 +56,9 @@ root.render(
         <QueryClientProvider client={queryClient}>
           <Web3Provider>
             <Provider store={store}>
-              <App />
+              <ThemeProvider>
+                <App />
+              </ThemeProvider>
             </Provider>
           </Web3Provider>
         </QueryClientProvider>
