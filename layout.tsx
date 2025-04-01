@@ -1,4 +1,3 @@
-import "./globals.css";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import type React from "react";
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
     description: "Optimize your yield farming strategy with AI-powered insights and DeFi tools on Solana.",
     url: "https://HONEYPOT GUARD.io",
     siteName: "HONEYPOT GUARD",
-    type: "website",   
+    type: "website",
     images: [
       {
         url: "https://HONEYPOT GUARD-public-assets.vercel.app/og-image.jpeg",
@@ -49,3 +48,4 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </html>
   );
 }
+  
