@@ -6,7 +6,7 @@ export default function Header() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-white">
-            VIGLO
+            Honeypot Guard
           </Link>
           <div className="space-x-4">
             <Link href="#how-it-works" className="text-white hover:text-purple-400 transition">
@@ -27,4 +27,4 @@ export default function Header() {
     </header>
   )
 }
-
+   
