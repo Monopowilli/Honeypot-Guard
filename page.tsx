@@ -5,7 +5,9 @@ import Features from "./components/Features";
 import UseCases from "./components/UseCases";
 import WhyHONEYPOTGUARD from "./components/WhyHONEYPOTGUARD";
 import Footer from "./components/Footer";
+import Head from "next/head";
 
+// Added dynamic imports for various components to improve performance
 const Hero = dynamic(() => import("./components/Hero"), {
   loading: () => <div className="text-center py-10 text-gray-400">Loading Hero...</div>,
   ssr: false,
@@ -18,13 +20,11 @@ const DynamicJoinRevolution = dynamic(() => import("./components/JoinRevolution"
   loading: () => <p className="text-center text-gray-400">HONEYPOT GUARD is powering up engagement tools...</p>,
   ssr: false,
 });
-
 const ContactUs = dynamic(() => import("./components/ContactUs"), {
   loading: () => <p className="text-center text-gray-400">Preparing Contact Us form...</p>,
   ssr: false,
 });
 
-import Head from "next/head";
 
 export default function Home() {
   useEffect(() => {
