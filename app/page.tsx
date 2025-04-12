@@ -32,4 +32,16 @@ export default function Home() {
     </main>
   ) 
 }
-  
+  <Suspense fallback={<div className="text-center py-10 text-gray-400">Loading Hero...</div>}>
+  <DynamicHero />
+</Suspense>
+<Suspense fallback={<div className="text-center py-10 text-gray-400">Loading Dashboard...</div>}>
+  <DynamicDashboard />
+</Suspense>
+<Suspense fallback={<div className="text-center py-10 text-gray-400">Loading Sections...</div>}>
+  <DynamicWhyApexify />
+  <DynamicHowItWorks />
+  <DynamicSmartDeFiEngine />
+  <DynamicIntegrations />
+  <DynamicFAQs />
+</Suspense>
