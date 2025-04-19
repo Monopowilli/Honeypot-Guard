@@ -6,3 +6,14 @@
   --foreground-rgb: 255, 255, 255;
   --background-rgb: 10, 10, 10;
 }
+html,
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
