@@ -4,12 +4,19 @@ import React, { useState, useEffect } from 'react'
 
 export default function LiveDashboard() {
   const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('/api/dashboard-data')
-      const data = await response.json()
-      setData(data)
+      try {
+        const response = await fetch('/api/dashboard-data')
+        const result = await response.json()
+        setData(result)
+      } catch (error) {
+        console.error('Error fetching data:', error)
+      } finally {
+        setLoading(false)
+      }
     }
 
     fetchData()
@@ -18,8 +25,7 @@ export default function LiveDashboard() {
   return (
     <div>
       <h1>Live Dashboard</h1>
-      {/* Display dynamic data */}
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      {loading ? <p>Loading...</p> : <pre>{JSON.stringify(data, null, 2)}</pre>}
     </div>
   )
 }
