@@ -41,3 +41,8 @@ root.render(
     </ErrorBoundary>
   </React.StrictMode>
 );
+
+componentDidCatch(error, errorInfo) {
+  console.error("Error caught by boundary:", error, errorInfo);
+  axios.post("/api/log-error", { error: error.message, errorInfo });
+}
