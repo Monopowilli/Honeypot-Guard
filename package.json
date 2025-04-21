@@ -87,7 +87,10 @@
     "eslint-config-next": "^14.2.16",
     "prettier": "^3.2.5",
     "jest": "^28.0.0",
-    "@types/jest": "^28.0.0"
+    "@types/jest": "^28.0.0",
+     "react-hook-form": "^7.54.1",
+    "zustand": "^4.5.0",
+    
   }
 }
  
