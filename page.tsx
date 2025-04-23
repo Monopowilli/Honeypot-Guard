@@ -6,6 +6,12 @@ import UseCases from "./components/UseCases";
 import WhyHONEYPOTGUARD from "./components/WhyHONEYPOTGUARD";
 import Footer from "./components/Footer";
 import Head from "next/head";
+// Added Footer component for improved user experience and navigation.
+import Footer from "./components/Footer";
+
+// Rendered Footer component at the bottom of the page
+<Footer />
+
 
 // Added dynamic imports for various components to improve performance
 const Hero = dynamic(() => import("./components/Hero"), {
