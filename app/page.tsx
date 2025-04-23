@@ -62,3 +62,8 @@ export default function Home() {
   </Suspense>
   <Footer />
 </main>
+
+<Suspense fallback={<div className="text-center py-10 text-gray-400">Loading Hero...</div>}>
+  <DynamicHero />
+</Suspense>
+
