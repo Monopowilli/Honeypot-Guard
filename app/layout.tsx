@@ -1,6 +1,10 @@
 import "./globals.css"
 import type { Metadata } from "next"
 import type React from "react" // Import React
+import ParticlesBackground from "../components/ParticlesBackground"
+
+// Inside the RootLayout component:
+<ParticlesBackground />
 
 export const metadata: Metadata = {
   title: "HONEYPOT GUARD",
