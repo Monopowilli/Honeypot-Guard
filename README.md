@@ -54,69 +54,51 @@ Honeypot Guard is built with a scalable and modular architecture to ensure high 
 - **Integration Layer** – Seamlessly connects to Solana, Ethereum, and DeFi protocols for broad compatibility.
 - **User Interface** – Simple, intuitive design for quick setup and monitoring of tokens.
 
-###Pricing
+## Pricing
+
 HONEYPOT GUARD offers three pricing tiers in SOL (Solana):
 
-**Basic Plan**
+1. **Basic Plan**
+   - **Price**: 0.25 SOL/month
+   - **Features**:
+     - Single Token Scans
+     - Basic Scam Detection
+     - Limited Real-Time Alerts (up to 5/month)
+     - Email Support
+     - Risk Overview Report
 
-Price: 0.25 SOL/month
+2. **Pro Plan**
+   - **Price**: 0.5 SOL/month
+   - **Features**:
+     - Unlimited Token Scans
+     - Advanced Scam Detection
+     - Real-Time Alerts (up to 50/month)
+     - Telegram/Discord Integration
+     - Priority Email Support
 
-Features:
+3. **Enterprise Plan**
+   - **Price**: 1 SOL/month
+   - **Features**:
+     - Unlimited Token Scans
+     - Customizable Risk Alerts
+     - Unlimited Real-Time Alerts
+     - Community Protection (Bots for Telegram/Discord)
+     - Dedicated Account Manager
 
-Single Token Scans
+## Contributing
 
-Basic Scam Detection
-
-Limited Real-Time Alerts (up to 5/month)
-
-Email Support
-
-Risk Overview Report
-
-**Pro Plan**
-
-Price: 0.5 SOL/month
-
-Features:
-
-Unlimited Token Scans
-
-Advanced Scam Detection
-
-Real-Time Alerts (up to 50/month)
-
-Telegram/Discord Integration
-
-Priority Email Support
-
-**Enterprise Plan**
-
-Price: 1 SOL/month
-
-Features:
-
-Unlimited Token Scans
-
-Customizable Risk Alerts
-
-Unlimited Real-Time Alerts
-
-Community Protection (Bots for Telegram/Discord)
-
-Dedicated Account Manager
-
-###Contributing
 We welcome contributions! If you want to contribute to Honeypot Guard, please fork the repository and follow the steps in our Contributing Guide.
 
-###License
+## License
+
 This project is licensed under the MIT License – see the LICENSE.md file for details.
 
-###Contact
-Twitter: @HoneypotGuard
+## Contact
 
-Website: honeypotguard.com
+- **Twitter**: [@HoneypotGuard](https://twitter.com/HoneypotGuard)
+- **Website**: [honeypotguard.com](https://honeypotguard.com)
 
-Telegram: Honeypot Guard Community
+## Acknowledgments
 
-Acknowledgments
 Special thanks to all contributors and the blockchain security community for making this project possible.
+
