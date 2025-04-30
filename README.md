@@ -29,15 +29,11 @@ Built to work across **Solana** and **multi-chain** ecosystems, **Honeypot Guard
 # Clone the repository
 git clone https://github.com/your-username/honeypot-guard.git
 cd honeypot-guard
+```
 
-# Install dependencies
-npm install
+### Basic Usage
 
-# Start the application
-npm start
-Basic Usage
-javascript
-Copy
+```bash 
 import { HoneypotGuard } from "@honeypotguard/sdk";
 
 (async () => {
@@ -46,23 +42,22 @@ import { HoneypotGuard } from "@honeypotguard/sdk";
   const securityReport = await honeypotGuard.analyze();
   console.log(securityReport);
 })();
-Architecture
+
+```
+
+### Architecture
 Honeypot Guard is built with a scalable and modular architecture to ensure high performance and easy integration:
 
-Core Engine – AI-driven contract analysis that scans for risks like honeypots, blacklists, and minting functions.
+- **Core Engine** – AI-driven contract analysis that scans for risks like honeypots, blacklists, and minting functions.
+- **Real-Time Alerts** – Provides immediate alerts on detected risks, delivered via Telegram and Discord.
+- **Risk Detection** – Flags token features such as excessive fees, restrictions, and minting vulnerabilities.
+- **Integration Layer** – Seamlessly connects to Solana, Ethereum, and DeFi protocols for broad compatibility.
+- **User Interface** – Simple, intuitive design for quick setup and monitoring of tokens.
 
-Real-Time Alerts – Provides immediate alerts on detected risks, delivered via Telegram and Discord.
-
-Risk Detection – Flags token features such as excessive fees, restrictions, and minting vulnerabilities.
-
-Integration Layer – Seamlessly connects to Solana, Ethereum, and DeFi protocols for broad compatibility.
-
-User Interface – Simple, intuitive design for quick setup and monitoring of tokens.
-
-Pricing
+###Pricing
 HONEYPOT GUARD offers three pricing tiers in SOL (Solana):
 
-Basic Plan
+**Basic Plan**
 
 Price: 0.25 SOL/month
 
@@ -78,7 +73,7 @@ Email Support
 
 Risk Overview Report
 
-Pro Plan
+**Pro Plan**
 
 Price: 0.5 SOL/month
 
@@ -94,7 +89,7 @@ Telegram/Discord Integration
 
 Priority Email Support
 
-Enterprise Plan
+**Enterprise Plan**
 
 Price: 1 SOL/month
 
@@ -110,13 +105,13 @@ Community Protection (Bots for Telegram/Discord)
 
 Dedicated Account Manager
 
-Contributing
+###Contributing
 We welcome contributions! If you want to contribute to Honeypot Guard, please fork the repository and follow the steps in our Contributing Guide.
 
-License
+###License
 This project is licensed under the MIT License – see the LICENSE.md file for details.
 
-Contact
+###Contact
 Twitter: @HoneypotGuard
 
 Website: honeypotguard.com
