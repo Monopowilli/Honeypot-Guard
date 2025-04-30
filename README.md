@@ -1,6 +1,6 @@
 # Honeypot Guard
 
-![Fixify Banner](https://raw.githubusercontent.com/Exilium-Labs/Fixify/refs/heads/main/Bandner.png)
+![HoneyPot Guard Banner](https://raw.githubusercontent.com/Exilium-Labs/Fixify/refs/heads/main/Bandner.png)
 
 **Honeypot Guard** is an AI-driven security tool designed to protect crypto traders from honeypot scams, blacklisted tokens, and other malicious smart contract features. It works by instantly scanning token contracts, providing real-time alerts, and offering clear, actionable reports to ensure traders can make informed decisions without the need for technical expertise.
 
