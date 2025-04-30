@@ -1,79 +1,127 @@
-# Fixify - AI-Powered Smart Contract Security 
+# Honeypot Guard
 
-![Fixify Banner](https://raw.githubusercontent.com/Exilium-Labs/Fixify/refs/heads/main/Banner.png)
+![Fixify Banner](https://raw.githubusercontent.com/Exilium-Labs/Fixify/refs/heads/main/Bandner.png)
 
-**Fixify** is an AI-driven security engine designed to **detect, analyze, and patch vulnerabilities** in smart contracts. Built for **Solana and multi-chain ecosystems**, Fixify enhances security by providing **automated audits, real-time threat detection, and AI-assisted code fixes**.
+**Honeypot Guard** is an AI-driven security tool designed to protect crypto traders from honeypot scams, blacklisted tokens, and other malicious smart contract features. It works by instantly scanning token contracts, providing real-time alerts, and offering clear, actionable reports to ensure traders can make informed decisions without the need for technical expertise.
 
-## **Features**
-- **AI-Based Vulnerability Detection** – Identifies weaknesses in smart contract code in real-time.
-- **Automated Security Patching** – Suggests and applies secure fixes without manual intervention.
-- **On-Chain Security Oracle** – Provides decentralized security scoring and auditing for smart contracts.
-- **Multi-Chain Compatibility** – Supports **Ethereum, Solana, and other major blockchains**.
-- **Permissionless & Non-Custodial** – Users retain full control over their smart contracts.
+Built to work across **Solana** and **multi-chain** ecosystems, **Honeypot Guard** uses advanced AI to detect and warn users about potential scams and risks before they make a trade.
 
----
+## Features
 
-## **Quick Start**
-### **Prerequisites**
+- **AI-Powered Token Scanning** – Detects risky contracts, including honeypots, excessive taxes, and minting vulnerabilities in real-time.
+- **Real-Time Alerts** – Sends instant notifications to your **Telegram** or **Discord** for immediate action when a risky token is detected.
+- **Blacklist Monitoring** – Identifies tokens that have blacklist mechanisms or restrictions that could prevent you from selling.
+- **Multi-Chain Compatibility** – Supports **Solana**, **Ethereum**, and other major blockchains to ensure broad coverage.
+- **No Technical Expertise Required** – Easy-to-understand reports that require no coding or contract reading knowledge.
+- **Telegram/Discord Integration** – Protect your community by setting up real-time alerts in group chats.
+
+## Quick Start
+
+### Prerequisites
+
 - A **Solana-compatible wallet** (Phantom, Solflare, Ledger)
-- SOL tokens for transactions
-- Smart contracts deployed on **Solana or EVM-compatible chains**
+- **SOL tokens** for transactions
+- Tokens deployed on **Solana** or **Ethereum** (EVM-compatible chains)
 
-### **Installation**
-```sh
+### Installation
+
+```bash
 # Clone the repository
-git clone https://github.com/Exilium-Labs/Fixify.git
-cd Fixify
+git clone https://github.com/your-username/honeypot-guard.git
+cd honeypot-guard
 
 # Install dependencies
-yarn install
+npm install
 
 # Start the application
-yarn start
-```
-
----
-
-## **Basic Usage**
-```javascript
-import { Fixify } from "@fixify/sdk";
+npm start
+Basic Usage
+javascript
+Copy
+import { HoneypotGuard } from "@honeypotguard/sdk";
 
 (async () => {
-  const fixify = new Fixify({ contractAddress: "your_contract_address" });
-  await fixify.connect();
-  const securityReport = await fixify.analyze();
+  const honeypotGuard = new HoneypotGuard({ contractAddress: "your_contract_address" });
+  await honeypotGuard.connect();
+  const securityReport = await honeypotGuard.analyze();
   console.log(securityReport);
 })();
-```
+Architecture
+Honeypot Guard is built with a scalable and modular architecture to ensure high performance and easy integration:
 
----
+Core Engine – AI-driven contract analysis that scans for risks like honeypots, blacklists, and minting functions.
 
-## **Architecture**
-Fixify is built with a modular architecture for **scalability and performance**:
+Real-Time Alerts – Provides immediate alerts on detected risks, delivered via Telegram and Discord.
 
-- **Core** – AI-based security analysis and automation logic.
-- **Threat Detection** – Identifies exploits like **reentrancy, unchecked external calls, and overflow errors**.
-- **Fix Engine** – Recommends automated contract upgrades and security patches.
-- **Integration Layer** – Seamless connection to **Solana, Ethereum, and DeFi protocols**.
-- **API & Dashboard** – Provides a user-friendly interface and real-time analytics.
+Risk Detection – Flags token features such as excessive fees, restrictions, and minting vulnerabilities.
 
----
+Integration Layer – Seamlessly connects to Solana, Ethereum, and DeFi protocols for broad compatibility.
 
-## **Contributing**
-We welcome contributions! Please see our **[Contributing Guide](#)** for details.
+User Interface – Simple, intuitive design for quick setup and monitoring of tokens.
 
----
+Pricing
+HONEYPOT GUARD offers three pricing tiers in SOL (Solana):
 
-## **License**
-This project is licensed under the **MIT License** – see the LICENSE file for details.
+Basic Plan
 
----
+Price: 0.25 SOL/month
 
-## **Contact**
-- 🐦 **Twitter:** [@ExiliumLabs](https://x.com/exilium_labs)
-- 🌐 **Website:** [ExiliumLabs](https://www.exiliumlabs.com/)
+Features:
 
----
+Single Token Scans
 
-## 🙌 **Acknowledgments**
-Special thanks to all contributors and the **blockchain security community** for making this project possible.
+Basic Scam Detection
+
+Limited Real-Time Alerts (up to 5/month)
+
+Email Support
+
+Risk Overview Report
+
+Pro Plan
+
+Price: 0.5 SOL/month
+
+Features:
+
+Unlimited Token Scans
+
+Advanced Scam Detection
+
+Real-Time Alerts (up to 50/month)
+
+Telegram/Discord Integration
+
+Priority Email Support
+
+Enterprise Plan
+
+Price: 1 SOL/month
+
+Features:
+
+Unlimited Token Scans
+
+Customizable Risk Alerts
+
+Unlimited Real-Time Alerts
+
+Community Protection (Bots for Telegram/Discord)
+
+Dedicated Account Manager
+
+Contributing
+We welcome contributions! If you want to contribute to Honeypot Guard, please fork the repository and follow the steps in our Contributing Guide.
+
+License
+This project is licensed under the MIT License – see the LICENSE.md file for details.
+
+Contact
+Twitter: @HoneypotGuard
+
+Website: honeypotguard.com
+
+Telegram: Honeypot Guard Community
+
+Acknowledgments
+Special thanks to all contributors and the blockchain security community for making this project possible.
