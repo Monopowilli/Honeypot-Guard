@@ -11,7 +11,7 @@ Built to work across **Solana** and **multi-chain** ecosystems, **Honeypot Guard
 - **AI-Powered Token Scanning** – Detects risky contracts, including honeypots, excessive taxes, and minting vulnerabilities in real-time.
 - **Real-Time Alerts** – Sends instant notifications to your **Telegram** or **Discord** for immediate action when a risky token is detected.
 - **Blacklist Monitoring** – Identifies tokens that have blacklist mechanisms or restrictions that could prevent you from selling.
-- **Multi-Chain Compatibility** – Supports **Solana**, **Ethereum**, and other major blockchains to ensure broad coverage.
+- **Multi-Chain Compatibility** – Supports **Solana**, and other major blockchains to ensure broad coverage.
 - **No Technical Expertise Required** – Easy-to-understand reports that require no coding or contract reading knowledge.
 - **Telegram/Discord Integration** – Protect your community by setting up real-time alerts in group chats.
 
@@ -21,7 +21,7 @@ Built to work across **Solana** and **multi-chain** ecosystems, **Honeypot Guard
 
 - A **Solana-compatible wallet** (Phantom, Solflare, Ledger)
 - **SOL tokens** for transactions
-- Tokens deployed on **Solana** or **Ethereum** (EVM-compatible chains)
+- Tokens deployed on **Solana** (EVM-compatible chains)
 
 ### Installation
 
@@ -51,7 +51,7 @@ Honeypot Guard is built with a scalable and modular architecture to ensure high 
 - **Core Engine** – AI-driven contract analysis that scans for risks like honeypots, blacklists, and minting functions.
 - **Real-Time Alerts** – Provides immediate alerts on detected risks, delivered via Telegram and Discord.
 - **Risk Detection** – Flags token features such as excessive fees, restrictions, and minting vulnerabilities.
-- **Integration Layer** – Seamlessly connects to Solana, Ethereum, and DeFi protocols for broad compatibility.
+- **Integration Layer** – Seamlessly connects to Solana and DeFi protocols for broad compatibility.
 - **User Interface** – Simple, intuitive design for quick setup and monitoring of tokens.
 
 ## Pricing
