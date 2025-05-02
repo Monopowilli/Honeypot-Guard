@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -13,17 +13,22 @@ const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const DynamicHome = lazy(() => import("./pages/Home"));
+const DynamicAbout = lazy(() => import("./pages/About"));
+
 root.render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <Web3Provider>
-        <Provider store={store}>
-          <ThemeProvider>
-            <App />
-          </ThemeProvider>
-        </Provider>
-      </Web3Provider>
-    </QueryClientProvider>
+    <Suspense fallback={<h1>Loading...</h1>}>
+      <QueryClientProvider client={queryClient}>
+        <Web3Provider>
+          <Provider store={store}>
+            <ThemeProvider>
+              <App />
+            </ThemeProvider>
+          </Provider>
+        </Web3Provider>
+      </QueryClientProvider>
+    </Suspense>
   </React.StrictMode>
 );
 
