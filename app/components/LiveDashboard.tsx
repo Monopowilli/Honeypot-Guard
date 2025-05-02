@@ -4,28 +4,26 @@ import React, { useState, useEffect } from 'react'
 
 export default function LiveDashboard() {
   const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const response = await fetch('/api/dashboard-data')
-        const result = await response.json()
-        setData(result)
-      } catch (error) {
-        console.error('Error fetching data:', error)
-      } finally {
-        setLoading(false)
-      }
+      const response = await fetch('/api/dashboard-data')
+      const data = await response.json()
+      setData(data)
     }
 
     fetchData()
+
+    // Set up live updates
+    const interval = setInterval(fetchData, 5000) // Update data every 5 seconds
+
+    return () => clearInterval(interval) // Clean up the interval on unmount
   }, [])
 
   return (
     <div>
       <h1>Live Dashboard</h1>
-      {loading ? <p>Loading...</p> : <pre>{JSON.stringify(data, null, 2)}</pre>}
+      <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   )
 }
