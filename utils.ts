@@ -7,7 +7,8 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Web3Provider } from "./contexts/Web3Context";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import { ThemeProvider } from "./contexts/ThemeContext";
+import { ThemeProvider } from "./contexts/ThemeContext"; 
+import { AuthProvider } from "./contexts/AuthContext"; // Added AuthContext for user authentication
 
 const queryClient = new QueryClient();
 
@@ -22,9 +23,11 @@ root.render(
       <QueryClientProvider client={queryClient}>
         <Web3Provider>
           <Provider store={store}>
-            <ThemeProvider>
-              <App />
-            </ThemeProvider>
+            <AuthProvider>
+              <ThemeProvider>
+                <App />
+              </ThemeProvider>
+            </AuthProvider>
           </Provider>
         </Web3Provider>
       </QueryClientProvider>
