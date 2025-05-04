@@ -1,25 +1,6 @@
 import { AuthProvider } from "./contexts/AuthContext"; 
-
-root.render(
-  <React.StrictMode>
-    <ErrorBoundary>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <QueryClientProvider client={queryClient}>
-          <Web3Provider>
-            <Provider store={store}>
-              <AuthProvider>
-                <ThemeProvider>
-                  <App />
-                </ThemeProvider>
-              </AuthProvider>
-            </Provider>
-          </Web3Provider>
-        </QueryClientProvider>
-      </Suspense>
-    </ErrorBoundary>
-  </React.StrictMode>
-);
-
+const DynamicContact = lazy(() => import("./pages/Contact"));
+const DynamicServices = lazy(() => import("./pages/Services"));
 import { Web3Provider } from "./contexts/Web3Context"; 
 
 root.render(
@@ -31,7 +12,10 @@ root.render(
             <Provider store={store}>
               <AuthProvider>
                 <ThemeProvider>
-                  <App />
+                  <DynamicHome />
+                  <DynamicAbout />
+                  <DynamicContact />
+                  <DynamicServices />
                 </ThemeProvider>
               </AuthProvider>
             </Provider>
@@ -41,6 +25,8 @@ root.render(
     </ErrorBoundary>
   </React.StrictMode>
 );
+
+
 
 componentDidCatch(error, errorInfo) {
   console.error("Error caught by boundary:", error, errorInfo);
