@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import { ThemeProvider } from "./contexts/ThemeContext"; 
 import { AuthProvider } from "./contexts/AuthContext"; // Added AuthContext for user authentication
+import axios from "axios";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,16 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const DynamicHome = lazy(() => import("./pages/Home"));
 const DynamicAbout = lazy(() => import("./pages/About"));
+
+const fetchData = async () => {
+  try {
+    const response = await axios.get("/api/data");
+    console.log(response.data);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    alert("Failed to fetch data. Please try again.");
+  }
+};
 
 root.render(
   <React.StrictMode>
