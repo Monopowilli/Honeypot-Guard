@@ -28,21 +28,45 @@ const fetchData = async () => {
   }
 };
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error("Error caught by boundary:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong.</h1>;
+    }
+    return this.props.children;
+  }
+}
+
 root.render(
   <React.StrictMode>
-    <Suspense fallback={<h1>Loading...</h1>}>
-      <QueryClientProvider client={queryClient}>
-        <Web3Provider>
-          <Provider store={store}>
-            <AuthProvider>
-              <ThemeProvider>
-                <App />
-              </ThemeProvider>
-            </AuthProvider>
-          </Provider>
-        </Web3Provider>
-      </QueryClientProvider>
-    </Suspense>
+    <ErrorBoundary>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <QueryClientProvider client={queryClient}>
+          <Web3Provider>
+            <Provider store={store}>
+              <AuthProvider>
+                <ThemeProvider>
+                  <App />
+                </ThemeProvider>
+              </AuthProvider>
+            </Provider>
+          </Web3Provider>
+        </QueryClientProvider>
+      </Suspense>
+    </ErrorBoundary>
   </React.StrictMode>
 );
 
