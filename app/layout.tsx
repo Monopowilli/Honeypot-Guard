@@ -19,3 +19,5 @@ export const metadata: Metadata = {
     />
   </head>
 </html>
+
+<div className="relative z-10">{children}</div>
