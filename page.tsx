@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import HowItWorks from "./components/HowItWorks";
 import Features from "./components/Features";
 import UseCases from "./components/UseCases";
-import WhyFixify from "./components/WhyFixify";
+import WhyHONEYPOT GUARD from "./components/WhyHONEYPOT GUARD";
 import Footer from "./components/Footer";
 
 const Hero = dynamic(() => import("./components/Hero"), {
@@ -11,19 +11,19 @@ const Hero = dynamic(() => import("./components/Hero"), {
   ssr: false,
 });
 const DynamicLiveDashboard = dynamic(() => import("./components/LiveDashboard"), {
-  loading: () => <p className="text-center text-gray-400">Fixify is preparing your live insights...</p>,
+  loading: () => <p className="text-center text-gray-400">HONEYPOT GUARD is preparing your live insights...</p>,
   ssr: false,
 });
 const DynamicJoinRevolution = dynamic(() => import("./components/JoinRevolution"), {
-  loading: () => <p className="text-center text-gray-400">Fixify is powering up engagement tools...</p>,
+  loading: () => <p className="text-center text-gray-400">HONEYPOT GUARD is powering up engagement tools...</p>,
   ssr: false,
 });
 
 import Head from "next/head";
 // inside component before <main>:
 <Head>
-  <title>Fixify — AI-Powered Solana Yield Insights</title>
-  <meta name="description" content="Fixify helps you unlock data-driven DeFi insights on Solana with real-time dashboards and predictive tools." />
+  <title>HONEYPOT GUARD — AI-Powered Solana Yield Insights</title>
+  <meta name="description" content="HONEYPOT GUARD helps you unlock data-driven DeFi insights on Solana with real-time dashboards and predictive tools." />
 </Head>
 
 
@@ -35,37 +35,37 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-gray-900 text-white overflow-x-hidden relative" aria-label="FIXIFY Main Content">
+    <main className="bg-gray-900 text-white overflow-x-hidden relative" aria-label="HONEYPOT GUARD Main Content">
       <div className="absolute inset-0 z-0 opacity-10 animate-pulse bg-gradient-to-br from-fuchsia-500 via-indigo-600 to-blue-500 blur-3xl" />
       <div className="relative z-10">
         <Suspense fallback={<div className="text-center py-10 text-gray-400">Loading Hero...</div>}>
           <Hero />
         </Suspense>
         <div className="border-t border-gray-800" />
-        <section id="how-it-works" aria-label="How Fixify Works">
+        <section id="how-it-works" aria-label="How HONEYPOT GUARD Works">
           <HowItWorks />
         </section>
         <div className="border-t border-gray-800" />
-        <section id="features" aria-label="Fixify Features">
+        <section id="features" aria-label="HONEYPOT GUARD Features">
           <Features />
         </section>
         <div className="border-t border-gray-800" />
-        <section id="use-cases" aria-label="Fixify Use Cases">
+        <section id="use-cases" aria-label="HONEYPOT GUARD Use Cases">
           <UseCases />
         </section>
         <div className="border-t border-gray-800" />
-        <section id="why-fixify" aria-label="Why Choose Fixify">
-          <WhyFixify />
+        <section id="why-HONEYPOT GUARD" aria-label="Why Choose HONEYPOT GUARD">
+          <WhyHONEYPOT GUARD />
         </section>
         <div className="border-t border-gray-800" />
-        <Suspense fallback={<p className="text-center text-gray-400">Fixify is preparing your live insights...</p>}>
+        <Suspense fallback={<p className="text-center text-gray-400">HONEYPOT GUARD is preparing your live insights...</p>}>
           <section id="live-dashboard" aria-label="Live Analytics Dashboard">
             <DynamicLiveDashboard />
           </section>
         </Suspense>
         <div className="border-t border-gray-800" />
-        <Suspense fallback={<p className="text-center text-gray-400">Fixify is powering up engagement tools...</p>}>
-          <section id="join" aria-label="Join the Fixify Movement">
+        <Suspense fallback={<p className="text-center text-gray-400">HONEYPOT GUARD is powering up engagement tools...</p>}>
+          <section id="join" aria-label="Join the HONEYPOT GUARD Movement">
             <DynamicJoinRevolution />
           </section>
         </Suspense>
