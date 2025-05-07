@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import HowItWorks from "./components/HowItWorks";
 import Features from "./components/Features";
 import UseCases from "./components/UseCases";
-import WhyHONEYPOT GUARD from "./components/WhyHONEYPOT GUARD";
+import WhyHONEYPOTGUARD from "./components/WhyHONEYPOTGUARD";
 import Footer from "./components/Footer";
 
 const Hero = dynamic(() => import("./components/Hero"), {
@@ -20,22 +20,14 @@ const DynamicJoinRevolution = dynamic(() => import("./components/JoinRevolution"
 });
 
 import Head from "next/head";
-// inside component before <main>:
-<Head>
-  <title>HONEYPOT GUARD — AI-Powered Solana Yield Insights</title>
-  <meta name="description" content="HONEYPOT GUARD helps you unlock data-driven DeFi insights on Solana with real-time dashboards and predictive tools." />
-</Head>
 
-
-// ... top of file
 export default function Home() {
-  
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <main className="bg-gray-900 text-white overflow-x-hidden relative" aria-label="HONEYPOT GUARD Main Content">
+      <Head>
+        <title>HONEYPOT GUARD — AI-Powered Solana Yield Insights</title>
+        <meta name="description" content="HONEYPOT GUARD helps you unlock data-driven DeFi insights on Solana with real-time dashboards and predictive tools." />
+      </Head>
       <div className="absolute inset-0 z-0 opacity-10 animate-pulse bg-gradient-to-br from-fuchsia-500 via-indigo-600 to-blue-500 blur-3xl" />
       <div className="relative z-10">
         <Suspense fallback={<div className="text-center py-10 text-gray-400">Loading Hero...</div>}>
@@ -55,7 +47,7 @@ export default function Home() {
         </section>
         <div className="border-t border-gray-800" />
         <section id="why-HONEYPOT GUARD" aria-label="Why Choose HONEYPOT GUARD">
-          <WhyHONEYPOT GUARD />
+          <WhyHONEYPOTGUARD />
         </section>
         <div className="border-t border-gray-800" />
         <Suspense fallback={<p className="text-center text-gray-400">HONEYPOT GUARD is preparing your live insights...</p>}>
@@ -74,4 +66,3 @@ export default function Home() {
     </main>
   );
 }
-
