@@ -67,3 +67,8 @@ export default function Home() {
   <DynamicHero />
 </Suspense>
 
+<Suspense fallback={<div className="text-center py-10 text-gray-400">Loading Dashboard...</div>}>
+  <DynamicDashboard />
+</Suspense>
+
+
