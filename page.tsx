@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import HowItWorks from "./components/HowItWorks";
 import Features from "./components/Features";
 import UseCases from "./components/UseCases";
@@ -22,6 +22,10 @@ const DynamicJoinRevolution = dynamic(() => import("./components/JoinRevolution"
 import Head from "next/head";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="bg-gray-900 text-white overflow-x-hidden relative" aria-label="HONEYPOT GUARD Main Content">
       <Head>
