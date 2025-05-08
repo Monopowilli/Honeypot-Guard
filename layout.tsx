@@ -1,6 +1,9 @@
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import type React from "react";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
