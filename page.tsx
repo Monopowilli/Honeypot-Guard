@@ -24,7 +24,7 @@ import Head from "next/head";
 export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, []);   
 
   return (
     <main className="bg-gray-900 text-white overflow-x-hidden relative" aria-label="HONEYPOT GUARD Main Content">
