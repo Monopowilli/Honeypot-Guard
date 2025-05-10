@@ -71,4 +71,11 @@ export default function Home() {
   <DynamicDashboard />
 </Suspense>
 
+<Suspense fallback={<div className="text-center py-10 text-gray-400">Loading Sections...</div>}>
+  <DynamicWhyApexify />
+  <DynamicHowItWorks />
+  <DynamicSmartDeFiEngine />
+  <DynamicIntegrations />
+  <DynamicFAQs />
+</Suspense>
 
