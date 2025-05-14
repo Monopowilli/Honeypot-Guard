@@ -30,9 +30,4 @@ export const metadata: Metadata = {
       },
     ],
   },
-  manifest: "/site.webmanifest",
-  openGraph: { 
-    locale: "en_US",
-    site_name: "HONEYPOT GUARD"
-  },
 };
