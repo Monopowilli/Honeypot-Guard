@@ -29,5 +29,7 @@ export const metadata: Metadata = {
         alt: "HONEYPOT GUARD OpenGraph Preview",
       },
     ],
+    locale: "en_US",
+    site_name: "HONEYPOT GUARD"
   },
 };
