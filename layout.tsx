@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   authors: [{ name: "HONEYPOT GUARD Team", url: "https://HONEYPOT GUARD.io" }],
   creator: "HONEYPOT GUARD",
   themeColor: "#000000",
-  manifest: "/site.webmanifest",
   openGraph: {
     title: "HONEYPOT GUARD - AI-Powered DeFi Optimization",
     description: "Automate and optimize yield farming with AI on Solana.",
@@ -32,4 +31,5 @@ export const metadata: Metadata = {
     locale: "en_US",
     site_name: "HONEYPOT GUARD"
   },
+  manifest: "/site.webmanifest",
 };
