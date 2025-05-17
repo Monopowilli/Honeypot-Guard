@@ -20,7 +20,7 @@
     "services": "@/services",
     "assets": "@/assets"
   },
-  "iconLibrary": "lucide",
+  "iconLibrary": "lucide", 
   "experimentalFeatures": {
     "animatedComponents": true,
     "darkModeVariants": true,
@@ -36,7 +36,7 @@
     "accordion",
     "input",
     "badge",
-    "tabs" 
+    "tabs"
   ],
   "configurations": {
     "enableStrictMode": true,
