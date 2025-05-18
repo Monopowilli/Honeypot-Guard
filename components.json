@@ -20,7 +20,7 @@
     "services": "@/services",
     "assets": "@/assets"
   },
-  "iconLibrary": "lucide", 
+  "iconLibrary": "lucide",
   "experimentalFeatures": {
     "animatedComponents": true,
     "darkModeVariants": true,
@@ -39,7 +39,7 @@
     "tabs"
   ],
   "configurations": {
-    "enableStrictMode": true,
+    "enableStrictMode": true, 
     "autoImport": true,
     "treeShaking": true,
     "showLogs": true
