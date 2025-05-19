@@ -39,9 +39,9 @@
     "tabs"
   ],
   "configurations": {
-    "enableStrictMode": true, 
-    "autoImport": true,
-    "treeShaking": true,
+    "enableStrictMode": true,
+    "autoImport": true, 
+    "treeShaking": true, 
     "showLogs": true
   }
 }
