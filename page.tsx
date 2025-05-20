@@ -49,21 +49,23 @@ export default function Home() {
           <Hero />
         </Suspense>
         <div className="border-t border-gray-800" />
+        // Refactored the sections for better structure and readability.
         <section id="how-it-works" aria-label="How HONEYPOT GUARD Works" className="scroll-smooth">
           <HowItWorks />
         </section>
-        <div className="border-t border-gray-800" />
+
         <section id="features" aria-label="HONEYPOT GUARD Features" className="scroll-smooth">
           <Features />
         </section>
-        <div className="border-t border-gray-800" />
+
         <section id="use-cases" aria-label="HONEYPOT GUARD Use Cases" className="scroll-smooth">
           <UseCases />
         </section>
-        <div className="border-t border-gray-800" />
+
         <section id="why-HONEYPOT GUARD" aria-label="Why Choose HONEYPOT GUARD" className="scroll-smooth">
           <WhyHONEYPOTGUARD />
         </section>
+
         <div className="border-t border-gray-800" />
         <Suspense fallback={<p className="text-center text-gray-400">HONEYPOT GUARD is preparing your live insights...</p>}>
           <section id="live-dashboard" aria-label="Live Analytics Dashboard" className="scroll-smooth">
