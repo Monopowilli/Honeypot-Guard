@@ -76,3 +76,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 <main className="max-w-screen-lg mx-auto px-4">
   {children}
 </main>
+
+
+export const metadata: Metadata = {
+  title: "HONEYPOT GUARD | AI-Powered Yield Optimization",
+  description: "Optimize your yield farming strategy on Solana with AI-powered insights and DeFi tools.",
+  generator: "v0.dev",
+  ...
+};
