@@ -15,13 +15,13 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      <Suspense fallback={<div>Loading Hero...</div>}>
+      <Suspense fallback={<div className="text-center py-10 text-gray-400">Loading Hero...</div>}>
         <DynamicHero />
       </Suspense>
-      <Suspense fallback={<div>Loading Dashboard...</div>}>
+      <Suspense fallback={<div className="text-center py-10 text-gray-400">Loading Dashboard...</div>}>
         <DynamicDashboard />
       </Suspense>
-      <Suspense fallback={<div>Loading....</div>}>
+      <Suspense fallback={<div className="text-center py-10 text-gray-400">Loading Sections...</div>}>
         <DynamicWhyApexify />
         <DynamicHowItWorks />
         <DynamicSmartDeFiEngine />
