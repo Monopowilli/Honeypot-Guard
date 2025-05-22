@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 import type React from "react" // Import React
 
 export const metadata: Metadata = {
-  title: "APEXIFY",
+  title: "HONEYPOT GUARD",
   description: "AI-Powered Yield Farming Across Solana",
 }
 
@@ -18,7 +18,7 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/apexify.jpg-B3vJz0v2kpg4SEucZOMbhmqjVzIx6G.jpeg"
+          href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HONEYPOT GUARD.jpg-B3vJz0v2kpg4SEucZOMbhmqjVzIx6G.jpeg"
           type="image/jpeg"
         />
       </head>
@@ -29,4 +29,3 @@ export default function RootLayout({
     </html>
   )
 }
-
