@@ -26,6 +26,6 @@ export default function RootLayout({
         <ParticlesBackground />
         <div className="relative z-10">{children}</div> 
       </body>
-    </html>
+    </html>  
   )
 }
