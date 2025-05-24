@@ -2,6 +2,21 @@ import { AuthProvider } from "./contexts/AuthContext";
 const DynamicContact = lazy(() => import("./pages/Contact"));
 const DynamicServices = lazy(() => import("./pages/Services"));
 import { Web3Provider } from "./contexts/Web3Context"; 
+import React, { createContext, useState, useContext } from "react";
+
+const LanguageContext = createContext({ language: "en", setLanguage: (lang: string) => {} });
+
+export const useLanguage = () => useContext(LanguageContext);
+
+export const LanguageProvider = ({ children }: any) => {
+  const [language, setLanguage] = useState("en");
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
 
 root.render(
   <React.StrictMode>
