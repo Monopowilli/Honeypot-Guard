@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link
-          rel="icon"
+          rel="icon"  
           href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HONEYPOT GUARD.jpg-B3vJz0v2kpg4SEucZOMbhmqjVzIx6G.jpeg"
           type="image/jpeg"
         />
