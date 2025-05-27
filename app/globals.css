@@ -64,3 +64,13 @@ p {
   background-size: 200% 200%;
   animation: gradient 3s ease infinite;
 }
+
+main {   
+  position: relative;
+  z-index: 10;
+}
+
+section {
+  position: relative;
+  z-index: 20;
+}
