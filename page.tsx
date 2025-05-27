@@ -18,7 +18,7 @@ const DynamicJoinRevolution = dynamic(() => import("./components/JoinRevolution"
   loading: () => <p className="text-center text-gray-400">HONEYPOT GUARD is powering up engagement tools...</p>,
   ssr: false,
 });
-
+     
 import Head from "next/head";
 
 export default function Home() {
