@@ -1,3 +1,4 @@
+
 {
   "$schema": "https://ui.shadcn.com/schema.json",
   "style": "default",
@@ -40,8 +41,8 @@
   ],
   "configurations": {
     "enableStrictMode": true,
-    "autoImport": true, 
-    "treeShaking": true, 
+    "autoImport": true,
+    "treeShaking": true,
     "showLogs": true
   }
 }
