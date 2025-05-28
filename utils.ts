@@ -73,3 +73,16 @@ root.render(
 if (process.env.NODE_ENV === "development") {
   reportWebVitals(console.log);
 }
+
+// Update to improve error handling and logging in fetchData function.
+const fetchData = async () => {
+  try {
+    const response = await axios.get("/api/data");
+    console.log(response.data);
+  } catch (error) {
+    console.error("Error fetching data:", error);  // Improved logging
+    alert("Failed to fetch data. Please try again.");
+    // Log the error to an external service (mocked for example)
+    axios.post("/api/log-error", { error: error.message });
+  }
+};
