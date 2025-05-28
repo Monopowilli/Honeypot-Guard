@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: "Automate and optimize yield farming with AI on Solana.",
     url: "https://HONEYPOT GUARD.io",
     siteName: "HONEYPOT GUARD",
-    type: "website",
+    type: "website",   
     images: [
       {
         url: "https://HONEYPOT GUARD-public-assets.vercel.app/og-image.jpeg",
