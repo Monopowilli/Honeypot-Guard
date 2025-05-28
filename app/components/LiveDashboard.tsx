@@ -18,7 +18,14 @@ export default function LiveDashboard() {
   return (
     <div>
       <h1>Live Dashboard</h1>
-      {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : <p>No data available</p>}
+      {data ? (
+        <div>
+          {/* Insert chart or visualization here */}
+          <pre>{JSON.stringify(data, null, 2)}</pre>
+        </div>
+      ) : (
+        <p>No data available</p>
+      )}
     </div>
   )
 }
