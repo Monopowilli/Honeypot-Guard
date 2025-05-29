@@ -52,3 +52,15 @@
   "cssVariables": true,
   "prefix": "ui"
 }
+"defaultComponents": [
+  "button",
+  "card",
+  "modal",
+  "tooltip",
+  "dropdown",
+  "form",
+  "accordion",
+  "input",
+  "badge",
+  "tabs"
+]
