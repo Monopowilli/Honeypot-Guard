@@ -9,7 +9,31 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import { ThemeProvider } from "./contexts/ThemeContext"; 
 import { AuthProvider } from "./contexts/AuthContext"; // Added AuthContext for user authentication
-import axios from "axios";
+import axios from "axios";// Added useFetchData hook to improve API logic reuse.
+
+const useFetchData = (url: string) => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(url);
+        setData(response.data);
+      } catch (err) {
+        setError(err);
+        console.error("Error fetching data:", err);
+      }
+    };
+    fetchData();
+  }, [url]);
+
+  return { data, error };
+};
+
+// Using the custom hook in the code
+const { data, error } = useFetchData("/api/data");
+
 
 const queryClient = new QueryClient();
 
@@ -86,3 +110,4 @@ const fetchData = async () => {
     axios.post("/api/log-error", { error: error.message });
   }
 };
+
