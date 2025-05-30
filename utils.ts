@@ -111,3 +111,42 @@ const fetchData = async () => {
   }
 };
 
+// Added LanguageContext for handling internationalization and user language preferences.
+import React, { createContext, useState, useContext } from "react";
+
+const LanguageContext = createContext({ language: "en", setLanguage: (lang: string) => {} });
+
+export const useLanguage = () => useContext(LanguageContext);
+
+export const LanguageProvider = ({ children }: any) => {
+  const [language, setLanguage] = useState("en");
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+// Wrapping the App with LanguageProvider
+root.render(
+  <React.StrictMode>
+    <LanguageProvider>
+      <ErrorBoundary>
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <QueryClientProvider client={queryClient}>
+            <Web3Provider>
+              <Provider store={store}>
+                <AuthProvider>
+                  <ThemeProvider>
+                    <App />
+                  </ThemeProvider>
+                </AuthProvider>
+              </Provider>
+            </Web3Provider>
+          </QueryClientProvider>
+        </Suspense>
+      </ErrorBoundary>
+    </LanguageProvider>
+  </React.StrictMode>
+);
