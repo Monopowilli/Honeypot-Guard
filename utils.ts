@@ -52,6 +52,7 @@ const fetchData = async () => {
   }
 };
 
+// Enhanced ErrorBoundary to send errors to an external service for tracking.
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -64,15 +65,18 @@ class ErrorBoundary extends React.Component {
 
   componentDidCatch(error, errorInfo) {
     console.error("Error caught by boundary:", error, errorInfo);
+    // Send error to an external logging service
+    axios.post("/api/log-error", { error: error.message, errorInfo });
   }
 
   render() {
     if (this.state.hasError) {
-      return <h1>Something went wrong.</h1>;
+      return <h1>Something went wrong. We're working on it!</h1>;
     }
     return this.props.children;
   }
 }
+
  
 root.render(
   <React.StrictMode>
