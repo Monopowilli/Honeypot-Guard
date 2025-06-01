@@ -78,6 +78,10 @@ class ErrorBoundary extends React.Component {
 }
 
  
+.// Refactor dynamic imports and Suspense for improved performance.
+const DynamicContact = lazy(() => import("./pages/Contact"));
+const DynamicServices = lazy(() => import("./pages/Services"));
+
 root.render(
   <React.StrictMode>
     <ErrorBoundary>
@@ -87,7 +91,10 @@ root.render(
             <Provider store={store}>
               <AuthProvider>
                 <ThemeProvider>
-                  <App />
+                  <DynamicHome />
+                  <DynamicAbout />
+                  <DynamicContact />
+                  <DynamicServices />
                 </ThemeProvider>
               </AuthProvider>
             </Provider>
@@ -97,6 +104,7 @@ root.render(
     </ErrorBoundary>
   </React.StrictMode>
 );
+
 
 if (process.env.NODE_ENV === "development") {
   reportWebVitals(console.log);
