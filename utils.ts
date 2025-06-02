@@ -1,15 +1,41 @@
+// Clean up unnecessary imports and optimize the structure of the file.
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Web3Provider } from "./contexts/Web3Context";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import { ThemeProvider } from "./contexts/ThemeContext"; 
-import { AuthProvider } from "./contexts/AuthContext"; // Added AuthContext for user authentication
-import axios from "axios";// Added useFetchData hook to improve API logic reuse.
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { AuthProvider } from "./contexts/AuthContext"; 
+import axios from "axios"; // Removed unused imports
+
+const queryClient = new QueryClient();
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const DynamicHome = lazy(() => import("./pages/Home"));
+const DynamicAbout = lazy(() => import("./pages/About"));
+
+root.render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <QueryClientProvider client={queryClient}>
+          <Web3Provider>
+            <Provider store={store}>
+              <AuthProvider>
+                <ThemeProvider>
+                  <App />
+                </ThemeProvider>
+              </AuthProvider>
+            </Provider>
+          </Web3Provider>
+        </QueryClientProvider>
+      </Suspense>
+    </ErrorBoundary>
+  </React.StrictMode>
+);
+
 
 const useFetchData = (url: string) => {
   const [data, setData] = useState(null);
