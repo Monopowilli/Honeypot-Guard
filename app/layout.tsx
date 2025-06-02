@@ -25,3 +25,7 @@ export const metadata: Metadata = {
   <ParticlesBackground />
   <div className="relative z-10">{children}</div>
 </body>
+export const metadata: Metadata = {
+  title: "HONEYPOT GUARD",
+  description: "AI-Powered Yield Farming Across Solana",
+}
