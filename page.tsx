@@ -38,30 +38,30 @@ export default function Home() {
           <Hero />
         </Suspense>
         <div className="border-t border-gray-800" />
-        <section id="how-it-works" aria-label="How HONEYPOT GUARD Works">
+        <section id="how-it-works" aria-label="How HONEYPOT GUARD Works" className="scroll-smooth">
           <HowItWorks />
         </section>
         <div className="border-t border-gray-800" />
-        <section id="features" aria-label="HONEYPOT GUARD Features">
+        <section id="features" aria-label="HONEYPOT GUARD Features" className="scroll-smooth">
           <Features />
         </section>
         <div className="border-t border-gray-800" />
-        <section id="use-cases" aria-label="HONEYPOT GUARD Use Cases">
+        <section id="use-cases" aria-label="HONEYPOT GUARD Use Cases" className="scroll-smooth">
           <UseCases />
         </section>
         <div className="border-t border-gray-800" />
-        <section id="why-HONEYPOT GUARD" aria-label="Why Choose HONEYPOT GUARD">
+        <section id="why-HONEYPOT GUARD" aria-label="Why Choose HONEYPOT GUARD" className="scroll-smooth">
           <WhyHONEYPOTGUARD />
         </section>
         <div className="border-t border-gray-800" />
         <Suspense fallback={<p className="text-center text-gray-400">HONEYPOT GUARD is preparing your live insights...</p>}>
-          <section id="live-dashboard" aria-label="Live Analytics Dashboard">
+          <section id="live-dashboard" aria-label="Live Analytics Dashboard" className="scroll-smooth">
             <DynamicLiveDashboard />
           </section>
         </Suspense>
         <div className="border-t border-gray-800" />
         <Suspense fallback={<p className="text-center text-gray-400">HONEYPOT GUARD is powering up engagement tools...</p>}>
-          <section id="join" aria-label="Join the HONEYPOT GUARD Movement">
+          <section id="join" aria-label="Join the HONEYPOT GUARD Movement" className="scroll-smooth">
             <DynamicJoinRevolution />
           </section>
         </Suspense>
@@ -70,3 +70,4 @@ export default function Home() {
     </main>
   );
 }
+  
