@@ -18,7 +18,12 @@ const DynamicJoinRevolution = dynamic(() => import("./components/JoinRevolution"
   loading: () => <p className="text-center text-gray-400">HONEYPOT GUARD is powering up engagement tools...</p>,
   ssr: false,
 });
-     
+
+const ContactUs = dynamic(() => import("./components/ContactUs"), {
+  loading: () => <p className="text-center text-gray-400">Preparing Contact Us form...</p>,
+  ssr: false,
+});
+
 import Head from "next/head";
 
 export default function Home() {
@@ -65,9 +70,14 @@ export default function Home() {
             <DynamicJoinRevolution />
           </section>
         </Suspense>
+        <div className="border-t border-gray-800" />
+        <Suspense fallback={<p className="text-center text-gray-400">Preparing Contact Us form...</p>}>
+          <section id="contact-us" aria-label="Contact Us">
+            <ContactUs />
+          </section>
+        </Suspense>
         <Footer />
       </div>
     </main>
   );
 }
-  
