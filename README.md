@@ -95,8 +95,8 @@ This project is licensed under the MIT License – see the LICENSE.md file for d
 
 ## Contact
 
-- **Twitter**: [@HoneypotGuard](https://twitter.com/HoneypotGuard)
-- **Website**: [honeypotguard.com](https://honeypotguard.com) 
+- **Twitter**: [@honeypot_guard](https://x.com/honeypot_guard)
+- **Website**: [honeypot-guard.com](https://honeypot-guard.com) 
 
 ## Acknowledgments
 
