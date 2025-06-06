@@ -64,3 +64,8 @@
   "badge",
   "tabs"
 ]
+"experimentalFeatures": {
+  "animatedComponents": true,
+  "darkModeVariants": true,
+  "responsiveTypography": true
+}
