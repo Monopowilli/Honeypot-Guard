@@ -33,4 +33,13 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
 };
-  
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="layout-container">
+      <main className="max-w-screen-lg mx-auto px-4">
+        {children}
+      </main>
+    </div>
+  );
+}
