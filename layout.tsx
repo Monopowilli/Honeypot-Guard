@@ -6,17 +6,17 @@ import type React from "react";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "HONEYPOT GUARD",
-  description: "AI-Powered Yield Optimization on Solana",
+  title: "HONEYPOT GUARD | AI-Powered Yield Optimization",
+  description: "Optimize your yield farming strategy on Solana with AI-powered insights and DeFi tools.",
   generator: "v0.dev",
   applicationName: "HONEYPOT GUARD",
-  keywords: ["AI", "DeFi", "Solana", "Yield", "Security", "Blockchain", "Optimization", "Farming", "DeFi Protection"],
+  keywords: ["AI", "DeFi", "Solana", "Yield Optimization", "Blockchain", "Farming", "Security", "DeFi Protection"],
   authors: [{ name: "HONEYPOT GUARD Team", url: "https://HONEYPOT GUARD.io" }],
   creator: "HONEYPOT GUARD",
   themeColor: "#000000",
   openGraph: {
-    title: "HONEYPOT GUARD - AI-Powered DeFi Optimization",
-    description: "Automate and optimize yield farming with AI on Solana.",
+    title: "HONEYPOT GUARD — AI-Powered Yield Optimization",
+    description: "Optimize your yield farming strategy with AI-powered insights and DeFi tools on Solana.",
     url: "https://HONEYPOT GUARD.io",
     siteName: "HONEYPOT GUARD",
     type: "website",   
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
 };
-
+ 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="layout-container">
