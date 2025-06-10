@@ -49,7 +49,7 @@ export default function Home() {
           <Hero />
         </Suspense>
         <div className="border-t border-gray-800" />
-        // Refactored the sections for better structure and readability.
+        // Added smooth scrolling behavior for sections.
         <section id="how-it-works" aria-label="How HONEYPOT GUARD Works" className="scroll-smooth">
           <HowItWorks />
         </section>
@@ -57,6 +57,7 @@ export default function Home() {
         <section id="features" aria-label="HONEYPOT GUARD Features" className="scroll-smooth">
           <Features />
         </section>
+
 
         <section id="use-cases" aria-label="HONEYPOT GUARD Use Cases" className="scroll-smooth">
           <UseCases />
