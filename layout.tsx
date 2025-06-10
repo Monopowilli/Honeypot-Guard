@@ -33,13 +33,19 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
 };
- 
+
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const userLanguage = "en"; // You can fetch user's language preference dynamically here
+
   return (
-    <div className="layout-container">
-      <main className="max-w-screen-lg mx-auto px-4">
-        {children}
-      </main>
-    </div>
+    <html lang={userLanguage}>
+      <body className={inter.className}>
+        <div className="layout-container">
+          <main className="max-w-screen-lg mx-auto px-4">
+            {children}
+          </main>
+        </div>
+      </body>
+    </html>
   );
 }
