@@ -77,8 +77,7 @@ export default function Home() {
           </section>
         </Suspense>
         <Footer />
-      </div>
+      </div>  
     </main>
   );
 }
-  
