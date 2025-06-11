@@ -69,3 +69,9 @@
   "darkModeVariants": true,
   "responsiveTypography": true
 }
+"configurations": {
+  "enableStrictMode": true,
+  "autoImport": true,
+  "treeShaking": true,
+  "showLogs": true
+}
