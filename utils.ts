@@ -1,4 +1,4 @@
-// Clean up unnecessary imports and optimize the structure of the file.
+// Final cleanup and ensure everything is organized and ready for production.
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
@@ -9,7 +9,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { AuthProvider } from "./contexts/AuthContext"; 
-import axios from "axios"; // Removed unused imports
+import axios from "axios";
 
 const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -35,6 +35,8 @@ root.render(
     </ErrorBoundary>
   </React.StrictMode>
 );
+
+// Additional production optimizations or minor tweaks can be done here.
 
 
 const useFetchData = (url: string) => {
