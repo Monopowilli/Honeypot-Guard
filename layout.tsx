@@ -84,3 +84,28 @@ export const metadata: Metadata = {
   generator: "v0.dev",
   ...
 };
+export const metadata: Metadata = {
+  ...
+  openGraph: {
+    title: "HONEYPOT GUARD — AI-Powered Yield Optimization",
+    description: "Optimize your yield farming strategy with AI-powered insights and DeFi tools on Solana.",
+    url: "https://HONEYPOT GUARD.io",
+    siteName: "HONEYPOT GUARD",
+    type: "website",
+    images: [
+      {
+        url: "https://HONEYPOT GUARD-public-assets.vercel.app/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "HONEYPOT GUARD OpenGraph Preview",
+      },
+    ],
+    locale: "en_US",
+    site_name: "HONEYPOT GUARD"
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@HONEYPOTGUARD",
+    creator: "@HONEYPOTGUARD"
+  }
+};
