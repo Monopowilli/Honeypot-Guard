@@ -12,6 +12,9 @@
     "test": "jest --config jest.config.js"
   },
    "dependencies": {
+    "typescript": "^5",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "^14.2.16",
     "expo": "latest",
     "react-native": "latest",
     "expo-gl": "latest",
