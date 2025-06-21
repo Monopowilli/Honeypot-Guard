@@ -39,10 +39,11 @@ export default function Home() {
 
   return (
     <main className="bg-gray-900 text-white overflow-x-hidden relative" aria-label="HONEYPOT GUARD Main Content">
-      <Head>
-        <title>HONEYPOT GUARD — AI-Powered Solana Yield Insights</title>
-        <meta name="description" content="HONEYPOT GUARD helps you unlock data-driven DeFi insights on Solana with real-time dashboards and predictive tools." />
-      </Head>
+      // Updated page title and meta description for better SEO
+        <Head>
+          <title>HONEYPOT GUARD — AI-Powered Solana Yield Insights</title>
+          <meta name="description" content="HONEYPOT GUARD helps you unlock data-driven DeFi insights on Solana with real-time dashboards and predictive tools." />
+        </Head>
       <div className="absolute inset-0 z-0 opacity-10 animate-pulse bg-gradient-to-br from-fuchsia-500 via-indigo-600 to-blue-500 blur-3xl" />
       <div className="relative z-10">
         <Suspense fallback={<div className="text-center py-10 text-gray-400">Loading Hero...</div>}>
