@@ -109,3 +109,20 @@ export const metadata: Metadata = {
     creator: "@HONEYPOTGUARD"
   }
 };
+
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  const userLanguage = "en"; // You can fetch user's language preference dynamically here
+
+  return (
+    <html lang={userLanguage}>
+      <body className={inter.className}>
+        <div className="layout-container">
+          <main className="max-w-screen-lg mx-auto px-4">
+            {children}
+          </main>
+        </div>
+      </body>
+    </html>
+  );
+}
