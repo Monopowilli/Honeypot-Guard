@@ -1,3 +1,4 @@
+// Final cleanup for production readiness, removing unnecessary comments.
 import { AuthProvider } from "./contexts/AuthContext"; 
 const DynamicContact = lazy(() => import("./pages/Contact"));
 const DynamicServices = lazy(() => import("./pages/Services"));
